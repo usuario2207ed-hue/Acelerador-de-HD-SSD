@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Leia-me — Acelerador de Disco - EDCELL-TECH</title>
+  <style>
+    :root{ --bg:#0f1720; --panel:#0b1220; --accent:#ff9800; --muted:#cbd5e1; }
+    body{ margin:0; font-family:Arial, Helvetica, sans-serif; background:var(--bg); color:var(--muted); }
+    .wrap{ max-width:900px; margin:32px auto; padding:24px; background:var(--panel); border-radius:10px; box-shadow:0 8px 30px rgba(0,0,0,0.6); }
+    h1{ margin:0 0 8px; color:#fff; font-size:1.6rem; }
+    p.lead{ margin:0 0 18px; color:#e6eef8; }
+    h2{ color:var(--accent); margin-top:18px; }
+    ol li{ margin:10px 0; }
+    pre{ background:#07121a; padding:12px; border-radius:6px; color:#bfe3ff; overflow:auto; }
+    code{ font-family:monospace; }
+    .btn{ display:inline-block; background:var(--accent); color:#07121a; padding:10px 14px; border-radius:8px; text-decoration:none; font-weight:700; margin-top:12px; }
+    footer{ margin-top:18px; color:#9fb3c8; font-size:0.9rem; text-align:center; }
+    @media(max-width:600px){ .wrap{ margin:16px; padding:16px; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Leia-me (versão simplificada)</h1>
+    <p class="lead">Guia rápido para instalar e usar o Painel <strong>Acelerador de Disco - EDCELL-TECH</strong> no Windows. Siga os passos na ordem.</p>
+
+    <h2>1. Estrutura mínima da pasta</h2>
+    <p>Coloque estes arquivos juntos na mesma pasta (raiz do projeto):</p>
+    <pre>index.html
+server.js
+Acelerador de disco.bat
+start.bat
+Leia-me.html</pre>
+
+    <h2>2. Requisitos</h2>
+    <ul>
+      <li>Windows 10/11</li>
+      <li>Node.js instalado (baixar em <a href="https://nodejs.org" target="_blank">nodejs.org</a>)</li>
+      <li>Permissão de administrador para executar o <code>start.bat</code></li>
+    </ul>
+
+    <h2>3. Passo a passo — modo automático (recomendado)</h2>
+    <ol>
+      <li>Coloque todos os arquivos na mesma pasta.</li>
+      <li>Clique com o botão direito em <code>start.bat</code> e escolha <strong>Executar como administrador</strong>.</li>
+      <li>O <code>start.bat</code> fará automaticamente:
+        <ul>
+          <li>criar <code>package.json</code> se faltar;</li>
+          <li>instalar o <code>express</code> (npm install express);</li>
+          <li>iniciar o servidor Node.js (<code>server.js</code>) em uma janela;</li>
+          <li>abrir o navegador em <code>http://localhost:3000</code>;</li>
+        </ul>
+      </li>
+      <li>Na página abra o painel e clique nas opções para executar as ações desejadas.</li>
+    </ol>
+
+    <h2>4. Passo a passo — modo manual</h2>
+    <ol>
+      <li>Abra o Prompt de Comando (ou PowerShell) na pasta do projeto.</li>
+      <li>Execute estes comandos na ordem:</li>
+      <pre>npm init -y
+npm install express
+node server.js</pre>
+      <li>Abra no navegador: <code>http://localhost:3000</code></li>
+    </ol>
+
+    <h2>5. O que cada botão faz (resumo)</h2>
+    <ul>
+      <li><strong>Gerenciador de Dispositivos:</strong> abre o devmgmt.msc (ajuste manual de políticas de disco).</li>
+      <li><strong>Instalar DiskMark/PrimoCache:</strong> executa o instalador se estiver em <code>setup\Combo Instalador.exe</code>.</li>
+      <li><strong>Reiniciar Computador:</strong> reinicia o sistema (shutdown /r /t 5).</li>
+      <li><strong>Teste com CrystalDiskMark:</strong> abre o CrystalDiskMark se instalado no caminho padrão.</li>
+      <li><strong>Abrir PrimoCache:</strong> abre o PrimoCache para configuração manual.</li>
+      <li><strong>Abrir Leia-me:</strong> abre esta página (Leia-me.html).</li>
+    </ul>
+
+    <h2>6. Dicas rápidas e segurança</h2>
+    <ul>
+      <li>Execute como administrador quando solicitado.</li>
+      <li>Revise o conteúdo do <code>.bat</code> antes de executar (segurança).</li>
+      <li>Se o antivírus bloquear, permita manualmente se confiar no projeto.</li>
+      <li>Se a porta 3000 estiver ocupada, edite <code>server.js</code> para usar outra porta.</li>
+    </ul>
+
+    <h2>7. Problemas comuns</h2>
+    <ul>
+      <li><strong>Node não encontrado:</strong> instale o Node.js e reinicie o terminal.</li>
+      <li><strong>Express não instalado:</strong> rode <code>npm install express</code> manualmente.</li>
+      <li><strong>Botões não respondem:</strong> verifique se o servidor está rodando (node server.js).</li>
+    </ul>
+
+    <a class="btn" href="index.html">Abrir o Painel</a>
+
+    <footer>
+      <p>EDCELL-TECH — Use com responsabilidade. — Versão simplificada do Leia‑me</p>
+    </footer>
+  </div>
+</body>
+</html>

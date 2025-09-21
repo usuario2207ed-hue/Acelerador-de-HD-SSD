@@ -35,7 +35,7 @@ Pode ser usado somente no navegador do PC.
 2. Os arquivos precisam esta todos em uma unica pasta para funcionar, salvos no PC.   
 
 3. Download dos arquivos
-  👉 https://usuario2207ed-hue.github.io/Dashboard-PC-Monitor/
+  👉 https://github.com/usuario2207ed-hue/Acelerador-de-HD-SSD/archive/refs/heads/main.zip
 
 ### Visite nosso site: 
 

@@ -30,7 +30,7 @@ Pode ser usado somente no navegador do PC.
 
 ## 🚀 Como usar
 1. Acesse o app neste link:  
-   👉 https://usuario2207ed-hue.github.io/Dashboard-PC-Monitor/
+   👉 https://usuario2207ed-hue.github.io/Acelerador-de-HD-SSD/
 
 2. Os arquivos precisam esta todos em uma unica pasta para funcionar, salvos no PC.   
 
